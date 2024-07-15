@@ -354,7 +354,8 @@ def soham(nums, val):
     # print("ans", ans)
     for i in range(ans):
         nums.remove(val)
+        print(nums)
 
-    return ans
+    return ans, len(nums)
 
 print(soham(nums, val))
