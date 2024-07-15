@@ -339,18 +339,22 @@
 # 1143
 # 49
 
+nums = [3,2,2,3]
+val = 3
 
-s = "(ed(et(oc))el)"
-s = "(u(love)i)"
+nums = [0,1,2,2,3,0,4,2]
+val = 2
 
-def soham(s):
-    ans = ""
-    arr = []
-    for i in range(0, len(s)):
-        if(s[i] == '('):
-            arr.append(i)
-        elif(s[i] == ')'):
-            popdata = arr.pop()
+def soham(nums, val):
+    ans = 0
+    for i in range(0, len(nums)):
+        if(nums[i] == val):
+            # print(i)
+            ans = ans + 1
+    # print("ans", ans)
+    for i in range(ans):
+        nums.remove(val)
+
     return ans
 
-print(soham(s))
+print(soham(nums, val))
