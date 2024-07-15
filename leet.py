@@ -348,7 +348,6 @@ def soham(haystack, needle):
     for i in range(0, len(haystack) - (len(needle) - 1)):
         if(haystack[i] == needle[0]):
             for j in range(0, len(needle)):
-                print(i, j, len(needle) - 1)
                 if(haystack[i+j] == needle[j]):
                     if(j == len(needle) - 1):
                         return i
