@@ -339,23 +339,21 @@
 # 1143
 # 49
 
-haystack = "sadbutsad"
-needle = "sad"
+nums = [5,7,7,8,8,10]
+target = 8
+nums = [5,7,7,8,8,10]
+target = 6
+def soham(nums, target):
+    start = -1
+    end = -1
+    ans = [start, end]
+    for i in range(0, len(nums)):
+        if(nums[i] == target):
+            if(ans[0] != -1):
+                ans[1] = i
+            else:
+                ans[0] = i
+                ans[1] = i
+    return ans
 
-# haystack = "leetcode"
-# needle = "leeto"
-def soham(haystack, needle):
-    for i in range(0, len(haystack) - (len(needle) - 1)):
-        if(haystack[i] == needle[0]):
-            for j in range(0, len(needle)):
-                if(haystack[i+j] == needle[j]):
-                    if(j == len(needle) - 1):
-                        return i
-                    continue
-                else:
-                    break
-        else:
-            continue
-    return -1
-
-print(soham(haystack, needle))
+print(soham(nums, target))
