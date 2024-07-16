@@ -338,36 +338,26 @@
 # 1457
 # 1143
 # 49
+# 2096
 
 
-def getDirections(self, root, startValue, destValue):
-    def getPath(node, value, path):
-        if not node:
-            return False
-        if node.val == value:
-            return True
-        path.append('L')
-        if getPath(node.left, value, path):
-            return True
-        path.pop()
-        path.append('R')
-        if getPath(node.right, value, path):
-            return True
-        path.pop()
-        return False
-    
-    startPath, destPath = [], []
-    getPath(root, startValue, startPath)
-    getPath(root, destValue, destPath)
-    
-    # Find the last common node
-    i = 0
-    while i < len(startPath) and i < len(destPath) and startPath[i] == destPath[i]:
-        i += 1
-    
-    # Up movements to LCA
-    stepsUp = 'U' * (len(startPath) - i)
-    # Down movements from LCA
-    stepsDown = ''.join(destPath[i:])
-    
-    return stepsUp + stepsDown
+
+
+
+nums = [-1,0,1,2,-1,-4]
+def soham(nums):
+    ans = []
+    for i in range(0, len(nums)):
+        for j in range(i+1, len(nums)):
+            for k in range(j+1, len(nums)):
+                if(nums[i] + nums[j] + nums[k] == 0 and (i!=j!=k)):
+                    data = sorted([nums[i], nums[j], nums[k]])
+                    if(data in ans):
+                        continue
+                    else:
+                        ans.append(data)
+                        break
+                else:
+                    continue
+    return ans
+print(soham(nums))
