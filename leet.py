@@ -345,18 +345,26 @@
 
 
 nums = [-1,0,1,2,-1,-4]
+nums = [-2, 0, 1, 1, 2]
+nums = [-1, 0, 1, 2, -1, -4, 2, 2]
+nums = [-4, -2, -1, 0, 1, 2, 3, 4]
+nums = [-1, 0, 1, 2, -1, -4]
 def soham(nums):
     ans = []
     for i in range(0, len(nums)):
         for j in range(i+1, len(nums)):
+            val = nums[i] + nums[j]
             for k in range(j+1, len(nums)):
-                if(nums[i] + nums[j] + nums[k] == 0 and (i!=j!=k)):
+                print(i, j, k)
+                if(nums[k] == -val):
+                    print("!!!!!")
                     data = sorted([nums[i], nums[j], nums[k]])
                     if(data in ans):
                         continue
                     else:
+                        print("-------")
                         ans.append(data)
-                        break
+                    break
                 else:
                     continue
     return ans
