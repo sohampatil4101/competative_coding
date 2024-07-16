@@ -339,21 +339,35 @@
 # 1143
 # 49
 
-nums = [5,7,7,8,8,10]
-target = 8
-nums = [5,7,7,8,8,10]
-target = 6
-def soham(nums, target):
-    start = -1
-    end = -1
-    ans = [start, end]
-    for i in range(0, len(nums)):
-        if(nums[i] == target):
-            if(ans[0] != -1):
-                ans[1] = i
-            else:
-                ans[0] = i
-                ans[1] = i
-    return ans
 
-print(soham(nums, target))
+def getDirections(self, root, startValue, destValue):
+    def getPath(node, value, path):
+        if not node:
+            return False
+        if node.val == value:
+            return True
+        path.append('L')
+        if getPath(node.left, value, path):
+            return True
+        path.pop()
+        path.append('R')
+        if getPath(node.right, value, path):
+            return True
+        path.pop()
+        return False
+    
+    startPath, destPath = [], []
+    getPath(root, startValue, startPath)
+    getPath(root, destValue, destPath)
+    
+    # Find the last common node
+    i = 0
+    while i < len(startPath) and i < len(destPath) and startPath[i] == destPath[i]:
+        i += 1
+    
+    # Up movements to LCA
+    stepsUp = 'U' * (len(startPath) - i)
+    # Down movements from LCA
+    stepsDown = ''.join(destPath[i:])
+    
+    return stepsUp + stepsDown
