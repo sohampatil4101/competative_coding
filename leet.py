@@ -344,7 +344,6 @@
 
 
 
-
 # nums = [-1,0,1,2,-1,-4]
 # nums = [-2, 0, 1, 1, 2]
 # nums = [-1, 0, 1, 2, -1, -4, 2, 2]
@@ -374,3 +373,20 @@
 # print(soham(nums))
 
 
+nums = [0,0,1,1,1,2,2,3,3,4]
+def soham(nums):
+    if not nums:
+        return 0
+
+    write_index = 1
+
+    for i in range(1, len(nums)):
+        if nums[i] != nums[i - 1]:
+            print(i, nums)
+            nums[write_index] = nums[i]
+            print(i, nums)
+            write_index += 1
+
+    return write_index
+
+print(soham(nums))
