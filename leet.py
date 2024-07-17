@@ -383,7 +383,50 @@ board = [["5","3",".",".","7",".",".",".","."]
 ,[".",".",".","4","1","9",".",".","5"]
 ,[".",".",".",".","8",".",".","7","9"]]
 def soham(board):
-    for i in range(0, len(board)):
-        print(board[i])
+   
+    for i in range(0, 9):
+        ro = {
+        "1":"",
+        "2":"",
+        "3":"",
+        "4":"",
+        "5":"",
+        "6":"",
+        "7":"",
+        "8":"",
+        "9":"",
+        }
+        col = {
+        "1":"",
+        "2":"",
+        "3":"",
+        "4":"",
+        "5":"",
+        "6":"",
+        "7":"",
+        "8":"",
+        "9":"",
+        }
+        for j in range(0, 9):
+            if(board[i][j] == '.'):
+                pass
+            elif(1 >int(board[i][j]) or int(board[i][j]) > 9):
+                return False
+            else:
+                if(ro[board[i][j]] == ""):
+                    ro[board[i][j]] = board[i][j]
+                else:
+                    return False
+                
+
+            if(board[j][i] == '.'):
+                pass
+            elif(1 >int(board[j][i]) or int(board[j][i]) > 9):
+                return False
+            else:
+                if(col[board[j][i]] == ""):
+                    col[board[j][i]] = board[j][i]
+                else:
+                    return False
     return True
 print(soham(board))
