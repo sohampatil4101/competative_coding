@@ -374,24 +374,17 @@
 # print(soham(nums))
 
 
-
-numRows = 5
-def soham(numRows):
-        ans = [[1], [1,1]]
-        if(numRows == 1):
-                return [[1]]
-        elif(numRows == 2):
-                return [[1], [1,1]]
+# 228
+nums = [0,1,2,4,5,7]
+def soham(nums):
+    ans = []
+    start = nums[0]
+    for i in range(0, len(nums) - 1):
+        print(i, nums[i], nums[i + 1])
+        if(nums[i + 1] - nums[i] == 1):
+            end = nums[i + 1]
         else:
-                for i in range(3, numRows + 1):
-                        data = [1]
-                        for j in range(0, len(ans[-1]) - 1):
-                                print("j", j, ans[-1][j])
-                                data.append(ans[-1][j] + ans[-1][j+1])
-                        data.append(1)
-                        ans.append(data)
-                return ans
-
-
-
-print(soham(numRows))
+            ans.append(f"{start}->{end}")
+            start = nums[i + 1]
+    return ans
+print(soham(nums))
