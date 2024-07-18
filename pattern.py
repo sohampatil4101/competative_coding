@@ -1,1 +1,19 @@
 # https://prepinsta.com/pattern-programs-tutorial/
+
+
+def Square_Star_Pattern():
+    n = int(input("Enter Number of rows"))
+
+    for i in range(0, n):
+        print("*"*n)
+
+Square_Star_Pattern()
+
+
+def Hollow_Square_Star_Pattern():
+    n = int(input("Enter Number of rows"))
+
+    for i in range(0, n):
+        print("*"*n)
+
+Hollow_Square_Star_Pattern()
