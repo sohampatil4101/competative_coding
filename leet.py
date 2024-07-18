@@ -385,7 +385,25 @@ board = [
     [".","2",".","9",".",".",".",".","."],
     [".",".","4",".",".",".",".",".","."]
     ]
+board = [["5","3",".",".","7",".",".",".","."]
+,["6",".",".","1","9","5",".",".","."]
+,[".","9","8",".",".",".",".","6","."]
+,["8",".",".",".","6",".",".",".","3"]
+,["4",".",".","8",".","3",".",".","1"]
+,["7",".",".",".","2",".",".",".","6"]
+,[".","6",".",".",".",".","2","8","."]
+,[".",".",".","4","1","9",".",".","5"]
+,[".",".",".",".","8",".",".","7","9"]]
 def soham(board):
+    s1 = []
+    s2 = []
+    s3 = []
+    s4 = []
+    s5 = []
+    s6 = []
+    s7 = []
+    s8 = []
+    s9 = []
    
     for i in range(0, 9):
         ro = {
@@ -411,28 +429,55 @@ def soham(board):
         "9":"",
         }
         for j in range(0, 9):
+            if(board[i][j] != '.'):
+                if(i<=2 and j<=2):
+                    return False if board[i][j] in s1 else s1.append(board[i][j])
+                elif(2<=i<=5 and j<=2):
+                    return False if board[i][j] in s2 else s2.append(board[i][j])
+                elif(5<=i<=8 and j<=2):
+                    return False if board[i][j] in s3 else s3.append(board[i][j])
 
-            print(i, j)
 
-            if(board[i][j] == '.'):
-                pass
-            elif(1 >int(board[i][j]) or int(board[i][j]) > 9):
-                return False
-            else:
-                if(ro[board[i][j]] == ""):
-                    ro[board[i][j]] = board[i][j]
-                else:
-                    return False
+                elif(i<=2 and 3<=j<=5):
+                    return False if board[i][j] in s4 else s4.append(board[i][j])
+                elif(2<=i<=5 and 3<=j<=5):
+                    return False if board[i][j] in s5 else s5.append(board[i][j])
+                elif(5<=i<=8 and 3<=j<=5):
+                    return False if board[i][j] in s6 else s6.append(board[i][j])
                 
 
-            if(board[j][i] == '.'):
-                pass
-            elif(1 >int(board[j][i]) or int(board[j][i]) > 9):
-                return False
-            else:
-                if(col[board[j][i]] == ""):
-                    col[board[j][i]] = board[j][i]
-                else:
+                elif(i<=2 and 5<=j<=8):
+                    return False if board[i][j] in s7 else s7.append(board[i][j])
+                elif(2<=i<=5 and 5<=j<=8):
+                    return False if board[i][j] in s8 else s8.append(board[i][j])
+                elif(5<=i<=8 and 5<=j<=8):
+                    return False if board[i][j] in s9 else s9.append(board[i][j])
+
+
+
+            if(True):
+                    
+                if(board[i][j] == '.'):
+                    pass
+                elif(1 >int(board[i][j]) or int(board[i][j]) > 9):
                     return False
+                else:
+                    if(ro[board[i][j]] == ""):
+                        ro[board[i][j]] = board[i][j]
+                    else:
+                        return False
+                    
+
+                if(board[j][i] == '.'):
+                    pass
+                elif(1 >int(board[j][i]) or int(board[j][i]) > 9):
+                    return False
+                else:
+                    if(col[board[j][i]] == ""):
+                        col[board[j][i]] = board[j][i]
+                    else:
+                        return False
+                    
+    print(s1, s2, s3, s4, s5, s6, s7, s8, s9)
     return True
 print(soham(board))
