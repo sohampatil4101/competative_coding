@@ -435,3 +435,19 @@
 # print(soham(board))
 
 
+
+nums1 = [1,3]
+nums2 = [2]
+nums1 = [1,2]
+nums2 = [3,4]
+def soham(nums1, nums2):
+    data = nums1 + nums2
+    data.sort()
+    if(len(data) % 2 == 0):
+        return (data[(len(data)//2) - 1] + data[len(data)//2]) / 2
+    else:
+        return data[len(data)//2]
+    
+
+
+print(soham(nums1, nums2))
