@@ -375,16 +375,28 @@
 
 
 # 228
-nums = [0,1,2,4,5,7]
-def soham(nums):
-    ans = []
-    start = nums[0]
-    for i in range(0, len(nums) - 1):
-        print(i, nums[i], nums[i + 1])
-        if(nums[i + 1] - nums[i] == 1):
-            end = nums[i + 1]
-        else:
-            ans.append(f"{start}->{end}")
-            start = nums[i + 1]
-    return ans
-print(soham(nums))
+# nums = [0,1,2,4,5,7, 8, 9]
+# def soham(nums):
+#     ans = []
+#     start = nums[0]
+#     for i in range(0, len(nums) - 1):
+#         if(nums[i + 1] - nums[i] == 1):
+#             end = nums[i + 1]
+#             if(i == len(nums) - 2):
+#                 if(start == end):
+#                     ans.append("{}".format(start))
+#                 else:    
+#                     ans.append("{}->{}".format(start, end))
+#         else:
+#             ans.append("{}->{}".format(start, end))
+#             start = nums[i + 1]
+#             end = nums[i + 1]
+#             if(i == len(nums) - 2):
+#                 if(start == end):
+#                     ans.append("{}".format(start))
+#                 else:    
+#                     ans.append("{}->{}".format(start, end))
+#     return ans
+
+# print(soham(nums))
+
