@@ -400,38 +400,3 @@
 
 # print(soham(nums))
 
-
-
-def restoreMatrix(rowSum, colSum):
-    # Get the number of rows and columns
-    m = len(rowSum)
-    n = len(colSum)
-    
-    # Initialize the matrix with zeros
-    matrix = [[0] * n for _ in range(m)]
-    
-    # Iterate over each cell in the matrix
-    for i in range(m):
-        for j in range(n):
-            # Determine the value to place in the current cell
-            value = min(rowSum[i], colSum[j])
-            
-            # Place the value in the matrix
-            matrix[i][j] = value
-            
-            # Update the rowSum and colSum
-            rowSum[i] -= value
-            colSum[j] -= value
-    
-    return matrix
-
-# Example usage:
-rowSum = [3, 8]
-colSum = [4, 7]
-print(restoreMatrix(rowSum, colSum))
-# Output: [[3, 0], [1, 7]]
-
-rowSum = [5, 7, 10]
-colSum = [8, 6, 8]
-print(restoreMatrix(rowSum, colSum))
-# Output: [[0, 5, 0], [6, 1, 0], [2, 0, 8]]
