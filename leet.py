@@ -407,5 +407,12 @@ matrix = [[3,7,8],[9,11,13],[15,16,17]]
 matrix = [[1,10,4,2],[9,3,8,7],[15,16,17,12]]
 def soham(matrix):
     ans = 0
+    for i in range(0, len(matrix)):
+        for j in range(0, len(matrix[i])):
+            # print(matrix[i][j])
+            try:
+                print(matrix[j][i])
+            except:
+                pass
     return ans 
 print(soham(matrix))
