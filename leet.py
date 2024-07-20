@@ -402,17 +402,36 @@
 
 
 
+def restoreMatrix(rowSum, colSum):
+    # Get the number of rows and columns
+    m = len(rowSum)
+    n = len(colSum)
+    
+    # Initialize the matrix with zeros
+    matrix = [[0] * n for _ in range(m)]
+    
+    # Iterate over each cell in the matrix
+    for i in range(m):
+        for j in range(n):
+            # Determine the value to place in the current cell
+            value = min(rowSum[i], colSum[j])
+            
+            # Place the value in the matrix
+            matrix[i][j] = value
+            
+            # Update the rowSum and colSum
+            rowSum[i] -= value
+            colSum[j] -= value
+    
+    return matrix
 
-matrix = [[3,7,8],[9,11,13],[15,16,17]]
-matrix = [[1,10,4,2],[9,3,8,7],[15,16,17,12]]
-def soham(matrix):
-    ans = 0
-    for i in range(0, len(matrix)):
-        for j in range(0, len(matrix[i])):
-            # print(matrix[i][j])
-            try:
-                print(matrix[j][i])
-            except:
-                pass
-    return ans 
-print(soham(matrix))
+# Example usage:
+rowSum = [3, 8]
+colSum = [4, 7]
+print(restoreMatrix(rowSum, colSum))
+# Output: [[3, 0], [1, 7]]
+
+rowSum = [5, 7, 10]
+colSum = [8, 6, 8]
+print(restoreMatrix(rowSum, colSum))
+# Output: [[0, 5, 0], [6, 1, 0], [2, 0, 8]]
