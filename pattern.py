@@ -34,12 +34,12 @@
 # Right_Angle_Triangle_Pattern()
 
 
-def Pyramid_Star_Pattern():
-    n = int(input("Enter Number of rows"))
-    k = 1
-    for i in range(0, n):
-        print(" "* (n-(i+1)), end="")
-        print("*"*(k))
-        k += 2
+# def Pyramid_Star_Pattern():
+#     n = int(input("Enter Number of rows"))
+#     k = 1
+#     for i in range(0, n):
+#         print(" "* (n-(i+1)), end="")
+#         print("*"*(k))
+#         k += 2
 
-Pyramid_Star_Pattern()
+# Pyramid_Star_Pattern()
