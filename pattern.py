@@ -63,30 +63,31 @@
 
 # Hollow_Pyramid_Star_Pattern()
 
-# def Inverted_Pyramid_Star_Pattern():
-#     n = 3
-#     k = n + 2
-#     for i in range(0, n):
-#         print(" "*(n - (n-i)), end="")
-#         print("*"*(k))
-#         k-=2
-
-# Inverted_Pyramid_Star_Pattern()
-
-
-def Inverted_Hollow_Pyramid_Star_Pattern():
+def Inverted_Pyramid_Star_Pattern():
     n = 4
     k = n + 2
     for i in range(0, n):
         print(" "*(n - (n-i)), end="")
-        if(i == 0):
-            print("*"*(k))
-        elif(i == n-1):
-            print("*"*(k))
-        else:
-            print("8", end="")
-            print("-"*(k), end="")
-            print("9")
+        print("*"*(k))
         k-=2
-Inverted_Hollow_Pyramid_Star_Pattern()
+
+Inverted_Pyramid_Star_Pattern()
+
+
+# def Inverted_Hollow_Pyramid_Star_Pattern():
+#     n = 4
+#     k = n + 2
+#     for i in range(0, n):
+#         print(" "*(n - (n-i)), end="")
+#         if(i == 0):
+#             print("*"*(k))
+#         elif(i == n-1):
+#             print("*"*(k))
+#         else:
+#             print("*"*(k))
+#             # print("8", end="")
+#             # print("-"*(k), end="")
+#             # print("9")
+#         k-=2
+# Inverted_Hollow_Pyramid_Star_Pattern()
 
