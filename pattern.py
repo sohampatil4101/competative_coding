@@ -65,9 +65,9 @@
 
 def Inverted_Pyramid_Star_Pattern():
     n = 3
-    k = n
+    k = n + 2
     for i in range(0, n):
-        print("-"*(n - (n-i)), end="")
+        print(" "*(n - (n-i)), end="")
         print("*"*(k))
         k-=2
 
