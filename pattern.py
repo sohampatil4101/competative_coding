@@ -62,3 +62,13 @@
 #         k = k + 2
 
 # Hollow_Pyramid_Star_Pattern()
+
+def Inverted_Pyramid_Star_Pattern():
+    n = 3
+    k = n
+    for i in range(0, n):
+        print("-"*(n - (n-i)), end="")
+        print("*"*(k))
+        k-=2
+
+Inverted_Pyramid_Star_Pattern()
