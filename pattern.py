@@ -27,11 +27,11 @@ def Right_Angle_Triangle_Pattern():
 Right_Angle_Triangle_Pattern()
 
 
-def Right_Angle_Triangle_Pattern():
-    n = 5
-    for i in range(0, n):
-        print("*" * (i+1))
-Right_Angle_Triangle_Pattern()
+# def Right_Angle_Triangle_Pattern():
+#     n = 5
+#     for i in range(0, n):
+#         print("*" * (i+1))
+# Right_Angle_Triangle_Pattern()
 
 
 # def Pyramid_Star_Pattern():
