@@ -400,3 +400,63 @@
 
 # print(soham(nums))
 
+
+
+from collections import defaultdict, deque
+
+class Solution(object):
+    def topological_sort(self, k, conditions):
+        indegree = [0] * (k + 1)
+        graph = defaultdict(list)
+        
+        for u, v in conditions:
+            graph[u].append(v)
+            indegree[v] += 1
+        
+        queue = deque([i for i in range(1, k + 1) if indegree[i] == 0])
+        topo_order = []
+        
+        while queue:
+            node = queue.popleft()
+            topo_order.append(node)
+            for neighbor in graph[node]:
+                indegree[neighbor] -= 1
+                if indegree[neighbor] == 0:
+                    queue.append(neighbor)
+        
+        if len(topo_order) == k:
+            return topo_order
+        else:
+            return []
+
+    def buildMatrix(self, k, rowConditions, colConditions):
+        """
+        :type k: int
+        :type rowConditions: List[List[int]]
+        :type colConditions: List[List[int]]
+        :rtype: List[List[int]]
+        """
+        row_order = self.topological_sort(k, rowConditions)
+        col_order = self.topological_sort(k, colConditions)
+        
+        if not row_order or not col_order:
+            return []
+        
+        pos_in_row = {num: i for i, num in enumerate(row_order)}
+        pos_in_col = {num: i for i, num in enumerate(col_order)}
+        
+        matrix = [[0] * k for _ in range(k)]
+        
+        for num in range(1, k + 1):
+            r = pos_in_row[num]
+            c = pos_in_col[num]
+            matrix[r][c] = num
+        
+        return matrix
+
+# Example usage:
+# sol = Solution()
+# k = 3
+# rowConditions = [[1, 2], [3, 2]]
+# colConditions = [[2, 1], [3, 2]]
+# print(sol.buildMatrix(k, rowConditions, colConditions))
