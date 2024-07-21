@@ -43,3 +43,9 @@
 #         k += 2
 
 # Pyramid_Star_Pattern()
+
+
+def Hollow_Pyramid_Star_Pattern():
+    n = 5
+    
+Hollow_Pyramid_Star_Pattern()
