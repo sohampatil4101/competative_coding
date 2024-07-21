@@ -47,5 +47,19 @@
 
 def Hollow_Pyramid_Star_Pattern():
     n = 5
-    
+    k = 1
+    for i in range(0, n):
+        print(" "*(n - (i + 1)), end="")
+        if(i == 0):
+            print("*"*(k))
+        elif(i == n - 1):
+            print("*"*(k))
+        else:
+            print("*", end="")
+            for k in range(k - 2):
+                print(" ", end="")
+            print("*")
+            
+        k+=2
+
 Hollow_Pyramid_Star_Pattern()
