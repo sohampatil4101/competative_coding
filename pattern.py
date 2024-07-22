@@ -91,4 +91,8 @@
 # Inverted_Hollow_Pyramid_Star_Pattern()
 
 
-
+def Half_Diamond_Star_Pattern():
+    n = 4
+    if(n%2 == 0):
+        n += 1
+Half_Diamond_Star_Pattern()
