@@ -92,9 +92,13 @@
 
 
 def Half_Diamond_Star_Pattern():
-    n = 4
+    n = 8
     if(n%2 == 0):
         n += 1
-    
+    for i in range(0, n):
+        if(n//2 >= i):
+            print("*"*(i+1))
+        else:
+            print("*"*(n-i))
     
 Half_Diamond_Star_Pattern()
