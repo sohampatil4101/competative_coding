@@ -402,13 +402,21 @@
 
 
 
-# Example usage:
+# Example usage:v
 # sol = Solution()
 # k = 3
 # rowConditions = [[1, 2], [3, 2]]
 # colConditions = [[2, 1], [3, 2]]
 # print(sol.buildMatrix(k, rowConditions, colConditions))
 
+names = ["Alice","Bob","Bob"]
+heights = [155,185,150]
+def soham(names, heights):
+    my_dict = {}
+    for i in range(0, len(names)):
+        my_dict[names[i]] = heights[i]
+    print(my_dict)
+    sorted_by_values = dict(sorted(my_dict.items(), key=lambda item: item[1]))
+    return list(sorted_by_values)[::-1]
 
-
-
+print(soham(names, heights))
