@@ -408,7 +408,21 @@
 # rowConditions = [[1, 2], [3, 2]]
 # colConditions = [[2, 1], [3, 2]]
 # print(sol.buildMatrix(k, rowConditions, colConditions))
+class Node:
+    def __init__(self, data=None):
+        self.data = data
+        self.next = None
 
-my_dict = {'apple': 2, 'banana': 3, 'pear': 1}
-sort = sorted(my_dict.items(), key= lambda item: item[1])
-print(sort)
+class LinkedList:
+    def __init__(self):
+        self.head = None
+
+    def append(self, data):
+        new_node = Node(data)
+        if self.head is None:
+            self.head = new_node
+        else:
+            current = self.head
+            while current.next:
+                current = current.next
+            current.next = new_node
