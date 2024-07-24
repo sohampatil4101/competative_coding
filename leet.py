@@ -409,3 +409,6 @@
 # colConditions = [[2, 1], [3, 2]]
 # print(sol.buildMatrix(k, rowConditions, colConditions))
 
+my_dict = {'apple': 2, 'banana': 3, 'pear': 1}
+sort = sorted(my_dict.items(), key= lambda item: item[1])
+print(sort)
