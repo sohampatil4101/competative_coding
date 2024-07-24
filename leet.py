@@ -418,6 +418,7 @@ class LinkedList:
         self.head = None
 
     def append(self, data):
+        print(self.head)
         new_node = Node(data)
         if self.head is None:
             self.head = new_node
@@ -426,3 +427,31 @@ class LinkedList:
             while current.next:
                 current = current.next
             current.next = new_node
+
+
+    # def display(self):
+    #     current = self.head
+    #     while current:
+    #         print(current.data, end=" -> ")
+    #         current = current.next
+    #     print("None")
+
+    def display(self):
+        current = self.head
+        if(current):
+            while current:
+                if(current.next is None):
+                    print(current.data)
+                else:
+                    print(current.data, "->", end="")
+                current = current.next
+        else:
+            print("linkedlist is empty")
+
+# Usage
+linked_list = LinkedList()
+linked_list.display()
+linked_list.append(1)
+linked_list.append(2)
+linked_list.append(3)
+linked_list.display()  # Output: 1 -> 2 -> 3 -> None
