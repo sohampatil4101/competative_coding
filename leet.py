@@ -408,6 +408,10 @@
 # rowConditions = [[1, 2], [3, 2]]
 # colConditions = [[2, 1], [3, 2]]
 # print(sol.buildMatrix(k, rowConditions, colConditions))
+
+
+
+
 class Node:
     def __init__(self, data=None):
         self.data = data
@@ -418,7 +422,6 @@ class LinkedList:
         self.head = None
 
     def append(self, data):
-        print(self.head)
         new_node = Node(data)
         if self.head is None:
             self.head = new_node
@@ -429,12 +432,12 @@ class LinkedList:
             current.next = new_node
 
 
-    # def display(self):
-    #     current = self.head
-    #     while current:
-    #         print(current.data, end=" -> ")
-    #         current = current.next
-    #     print("None")
+    def display(self):
+        current = self.head
+        while current:
+            print(current.data, end=" -> ")
+            current = current.next
+        print("None")
 
     def display(self):
         current = self.head
@@ -450,7 +453,6 @@ class LinkedList:
 
 # Usage
 linked_list = LinkedList()
-linked_list.display()
 linked_list.append(1)
 linked_list.append(2)
 linked_list.append(3)
