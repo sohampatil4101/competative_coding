@@ -457,3 +457,31 @@ linked_list.append(1)
 linked_list.append(2)
 linked_list.append(3)
 linked_list.display()  # Output: 1 -> 2 -> 3 -> None
+
+
+def min_deletions_to_make_balanced(s: str) -> int:
+    total_a = s.count('a')
+    total_b = len(s) - total_a  # Since the string only contains 'a' and 'b'
+    
+    # Initialize current counts of 'a' and 'b' seen so far
+    current_a = 0
+    current_b = 0
+    
+    # Initialize minimum deletions as the number of 'a's to be deleted or 'b's to be deleted
+    min_deletions = min(total_a, total_b)
+    
+    for char in s:
+        if char == 'a':
+            current_a += 1
+        else:
+            current_b += 1
+        
+        # We can delete all 'a's before this point (current_a) or all 'b's after this point (total_b - current_b)
+        # Update the minimum deletions required
+        min_deletions = min(min_deletions, current_b + (total_a - current_a))
+    
+    return min_deletions
+
+# Example usage
+print(min_deletions_to_make_balanced("aababbab"))  # Output: 2
+print(min_deletions_to_make_balanced("bbaaaaabb")) # Output: 2
