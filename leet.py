@@ -461,10 +461,10 @@
 
 
 data={
-    "vrusharth":"1500",
-    "soham":"0",
-    "sharvesh":"0",
-    "dhrub":"0",
+    "vrusharth":"60",
+    "soham":"40",
+    "sharvesh":"90",
+    "dhrub":"10",
 }
 def soham(data):
     ans = data.copy()
@@ -474,9 +474,9 @@ def soham(data):
     payable = total/len(data)
     for key in ans:
         if(float(ans[key]) >= payable):
-            ans[key] = float(ans[key]) - payable
+            ans[key] = str(float(ans[key]) - payable) + "++"
         else:
-            ans[key] = payable - float(ans[key])
-    return data, ans
+            ans[key] = str(payable - float(ans[key])) + "--"
+    return ans
 
 print(soham(data))
