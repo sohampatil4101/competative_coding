@@ -460,4 +460,19 @@
 
 
 
+data={
+    "vrusharth":"1500",
+    "soham":"0",
+    "sharvesh":"0",
+    "dhrub":"0",
+}
+def soham(data):
+    ans = {}
+    total = 0
+    print(len(data))
+    for key in data:
+        total = total + int(data[key])
+    print(total/len(data))
+    return ans
 
+print(soham(data))
