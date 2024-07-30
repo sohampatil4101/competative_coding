@@ -467,12 +467,17 @@ data={
     "dhrub":"0",
 }
 def soham(data):
-    ans = {}
+    ans = data.copy()
     total = 0
-    print(len(data))
     for key in data:
         total = total + int(data[key])
-    print(total/len(data))
-    return ans
+    payable = total/len(data)
+    for key in ans:
+        if(float(ans[key]) >= payable):
+            ans[key] = float(ans[key]) - payable
+        else:
+            ans[key] = payable - float(ans[key])
+    # print(data)
+    return data, ans
 
 print(soham(data))
