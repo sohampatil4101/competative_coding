@@ -477,7 +477,6 @@ def soham(data):
             ans[key] = float(ans[key]) - payable
         else:
             ans[key] = payable - float(ans[key])
-    # print(data)
     return data, ans
 
 print(soham(data))
