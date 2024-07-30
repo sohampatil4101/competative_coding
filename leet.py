@@ -480,3 +480,25 @@
 #     return ans
 
 # print(soham(data))
+
+
+height = [1,8,6,2,5,4,8,3,7]
+def soham(height):
+    max_area = 0
+    left = 0
+    right = len(height) - 1
+    min_area = (right - left) * min(height)
+    print(min_area)
+    while(left<right):
+        if(height[left] < height[left + 1]):
+            left = left + 1
+        else:
+            right = right - 1
+        
+        print("x",left, right)
+        area = min(height[left], height[right]) * min(height[left], height[right]) 
+        if(min_area < area):
+            min_area = area
+    return area
+
+print(soham(height))
