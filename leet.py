@@ -460,6 +460,7 @@
 
 
 
+# js logic for prject
 # data={
 #     "vrusharth":"60",
 #     "soham":"40",
@@ -482,32 +483,24 @@
 # print(soham(data))
 
 
-# js logic for prject
-# height = [1,8,6,2,5,4,8,3,7]
-# def soham(height):
-#     max_area = 0
-#     left = 0
-#     right = len(height) - 1
-#     min_area = (right - left) * min(height)
-#     print(min_area)
-#     while(left<right):
-#         if(height[left] < height[left + 1]):
-#             left = left + 1
-#         else:
-#             right = right - 1
+height = [1,8,6,2,5,4,8,3,7]
+def soham(height):
+    max_area = 0
+    left = 0
+    right = len(height) - 1
+    min_area = (right - left) * min(height)
+    print(min_area)
+    while(left<right):
+        if(height[left] < height[left + 1]):
+            left = left + 1
+        else:
+            right = right - 1
         
-#         print("x",left, right)
-#         area = min(height[left], height[right]) * min(height[left], height[right]) 
-#         if(min_area < area):
-#             min_area = area
-#     return area
+        print("x",left, right)
+        area = min(height[left], height[right]) * min(height[left], height[right]) 
+        if(min_area < area):
+            min_area = area
+    return area
 
-# print(soham(height))
+print(soham(height))
 
-
-# List of tuples
-tuples = [(1, 'banana'), (2, 'apple'), (3, 'cherry')]
-
-# Sorting by the second element of each tuple
-sorted_tuples = sorted(tuples, key=lambda x: x[1])
-print(sorted_tuples)  # Output: [(2, 'apple'), (1, 'banana'), (3, 'cherry')]
