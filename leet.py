@@ -467,11 +467,3 @@
 #     nums.sort()
 #     print(nums)
 # print(soham(nums))
-
-
-details = ["7868190130M7522","5303914400F9211","9273338290F4010"]
-count = 0
-for i in range(0, len(details)):
-    if(details[i][11:13] > 60):
-        count = count + 1
-return count
