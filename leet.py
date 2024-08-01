@@ -464,24 +464,6 @@ nums = [-1, 0, 1, 2, -1, -4, 2, 2]
 nums = [-4, -2, -1, 0, 1, 2, 3, 4]
 nums = [-1, 0, 1, 2, -1, -4]
 def soham(nums):
-    nums.sort()  # Sort the list to use two-pointer technique
+    nums.sort()
     print(nums)
-    ans = []
-    for i in range(0, len(nums) - 2):
-        for j in range(i+1, len(nums) - 1):
-            val = nums[i] + nums[j]
-            for k in range(j+1, len(nums)):
-                # print(i, j, k)
-                if(nums[k] == -val):
-                    # print("!!!!!")
-                    # data = sorted([nums[i], nums[j], nums[k]])
-                    if([nums[i], nums[j], nums[k]] in ans):
-                        continue
-                    else:
-                        # print("-------")
-                        ans.append([nums[i], nums[j], nums[k]])
-                    break
-                else:
-                    continue
-    return ans
 print(soham(nums))
