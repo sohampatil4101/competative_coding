@@ -461,10 +461,10 @@
 
 # js logic for prject
 data={
-    "vrusharth":"60",
-    "soham":"40",
-    "sharvesh":"90",
-    "dhrub":"10",
+    "vrusharth":"850",
+    "soham":"0",
+    "sharvesh":"100",
+    "dhrub":"85",
 }
 def soham(data):
     ans = data.copy()
@@ -474,9 +474,9 @@ def soham(data):
     payable = total/len(data)
     for key in ans:
         if(float(ans[key]) >= payable):
-            ans[key] = str(float(ans[key]) - payable) + "++"
+            ans[key] = "+" + str(float(ans[key]) - payable) 
         else:
-            ans[key] = str(payable - float(ans[key])) + "--"
+            ans[key] = "-" + str(payable - float(ans[key])) 
     return ans
 
 print(soham(data))
