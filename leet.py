@@ -480,23 +480,3 @@ def soham(nums):
         pass
     return ans
 print(soham(nums))
-total_ones = nums.count(1)
-    
-    if total_ones == 0:
-        return 0
-    
-    nums = nums + nums  # Extend the array to handle circular nature
-    n = len(nums) // 2
-
-    current_zeros = nums[:total_ones].count(0)
-    min_swaps = current_zeros
-
-    for i in range(1, n):
-        if nums[i - 1] == 0:
-            current_zeros -= 1
-        if nums[i + total_ones - 1] == 0:
-            current_zeros += 1
-        
-        min_swaps = min(min_swaps, current_zeros)
-    
-    return min_swaps
