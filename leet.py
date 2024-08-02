@@ -445,15 +445,39 @@
 #     print(nums)
 # print(soham(nums))
 
-nums = [0,1,1,1,0,0,1,1,0]
-nums = [0,1,0,1,1,0,0]
-nums = [0,0,1,1,0,0,0,0,1,1,0,1,0,0,0,1,0,1,0,0,0,1,1,1,1,1,1]
-def soham(nums):
-    ans = 0
-    count0 = 0
-    count1 = 0
-    flag1 = True
-    for i in range(0, len(nums)):
-        pass
-    return ans
-print(soham(nums))
+# nums = [0,1,1,1,0,0,1,1,0]
+# nums = [0,1,0,1,1,0,0]
+# nums = [0,0,1,1,0,0,0,0,1,1,0,1,0,0,0,1,0,1,0,0,0,1,1,1,1,1,1]
+# def soham(nums):
+#     ans = 0
+#     count0 = 0
+#     count1 = 0
+#     flag1 = True
+#     for i in range(0, len(nums)):
+#         pass
+#     return ans
+# print(soham(nums))
+
+
+# js logic for prject
+# data={
+#     "vrusharth":"60",
+#     "soham":"40",
+#     "sharvesh":"90",
+#     "dhrub":"10",
+# }
+# def soham(data):
+#     ans = data.copy()
+#     total = 0
+#     for key in data:
+#         total = total + int(data[key])
+#     payable = total/len(data)
+#     for key in ans:
+#         if(float(ans[key]) >= payable):
+#             ans[key] = str(float(ans[key]) - payable) + "++"
+#         else:
+#             ans[key] = str(payable - float(ans[key])) + "--"
+#     return ans
+
+# print(soham(data))
+
