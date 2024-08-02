@@ -467,3 +467,25 @@
 #     nums.sort()
 #     print(nums)
 # print(soham(nums))
+
+nums = [0,1,1,1,0,0,1,1,0]
+nums = [0,1,0,1,1,0,0]
+def soham(nums):
+    ans = 0
+    count0 = 0
+    count1 = 0
+    flag = True
+    for i in range(0, len(nums)):
+        if(flag):
+                if(nums[i] == 1):
+                        count1 += 1
+                        flag = False
+                continue
+        if(nums[i] == 1):
+              count1 += 1
+        else:
+              count0 += 1
+            
+    print(count0, count1)
+    return ans
+print(soham(nums))
