@@ -464,7 +464,7 @@ data={
     "vrusharth":"850",
     "soham":"0",
     "sharvesh":"100",
-    "dhrub":"85",
+    "dhrub":"1000",
 }
 
 def findcon(dic):
@@ -482,7 +482,7 @@ def soham(data):
         else:
             ans[key] = "-" + str(payable - float(ans[key])) 
     # findcon(ans)
-    
+    ans = dict(sorted(ans.items(), key=lambda item: item[1]))
     return ans
 
 print(soham(data))
