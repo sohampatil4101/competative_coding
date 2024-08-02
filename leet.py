@@ -466,6 +466,10 @@ data={
     "sharvesh":"100",
     "dhrub":"85",
 }
+
+def findcon(dic):
+    for i in dic:
+        print(dic[i])
 def soham(data):
     ans = data.copy()
     total = 0
@@ -477,7 +481,11 @@ def soham(data):
             ans[key] = "+" + str(float(ans[key]) - payable) 
         else:
             ans[key] = "-" + str(payable - float(ans[key])) 
+    # findcon(ans)
+    
     return ans
 
 print(soham(data))
+
+
 
