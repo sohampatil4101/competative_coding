@@ -1,5 +1,15 @@
-# container
-# 3sum
+# container-
+
+# 3sum-
+        # Algorithm Steps
+        # Sort the array.
+        # Iterate through the array with a loop variable i.
+        # For each i, set two pointers: left (starting from i+1) and right (starting from the end of the array).
+        # Calculate the sum of the elements at i, left, and right.
+        # If the sum is zero, add the triplet to the result list.
+        # If the sum is less than zero, increment the left pointer.
+        # If the sum is greater than zero, decrement the right pointer.
+        # Skip duplicate elements to ensure unique triplets.
 
 
 
