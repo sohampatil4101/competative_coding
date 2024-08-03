@@ -524,19 +524,19 @@
 
 # print(soham(data))
 
-target = [1,2,3,4]
-arr = [2,4,1,3]
-def soham(target, arr):
-    if(target == arr):
-        return True
-    else:
-        for i in target:
-            if(i in arr):
-                continue
-            else:
-                return False
-    return True
+# target = [1,2,3,4]
+# arr = [2,4,1,3]
+# def soham(target, arr):
+#     if(target == arr):
+#         return True
+#     else:
+#         for i in target:
+#             if(i in arr):
+#                 continue
+#             else:
+#                 return False
+#     return True
 
-print(soham(target, arr))
+# print(soham(target, arr))
 
 
