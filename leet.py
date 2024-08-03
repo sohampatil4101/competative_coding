@@ -541,26 +541,24 @@
 # print(soham(data))
 
 nums = [-1,0,1,2,-1,-4]
+nums = [0,0,0,0]
+nums = [-2,0,1,1,2]
 def soham(nums):
+    nums.sort()
     ans = []
-    left = 0
-    right = len(nums) - 1
-    print(left, right)
-    flag = True
-    while(flag):
-        print("aaaa")
-        for i in range(left, right):
-                if(nums[left] + nums[right] + nums[i] == 0):
-                     ans.append([nums[left], nums[right], nums[i]])
-                print(left, i, right)
-
-
-        if(len(nums)%2 == 0 and right - left == 1):
-             flag = False
-        elif(len(nums)%2 == 1 and right - left == 2):
-             flag = False
-        left = left + 1
-        right = right - 1
+    for i in range(0, len(nums)):
+        print(i)
+        left = i + 1
+        right = len(nums) - 1
+        while(right > left):
+            if(nums[left] + nums[right] + nums[i] == 0):
+                if([nums[left], nums[right], nums[i]] not in ans):
+                        ans.append([nums[left], nums[right], nums[i]])
+                break
+            elif(nums[left] + nums[right] + nums[i] < 0):
+                left += 1
+            elif(nums[left] + nums[right] + nums[i] > 0):
+                right -= 1
     return ans
 
 print(soham(nums))
