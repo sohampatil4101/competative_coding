@@ -538,10 +538,16 @@ def soham(nums):
     print(left, right)
     flag = True
     while(flag):
-        for i in range(1, len(nums) - 1):
-                print(i)
+        print("aaaa")
+        for i in range(left, right):
+                if(nums[left] + nums[right] + nums[i] == 0):
+                     ans.append([nums[left], nums[right], nums[i]])
+                print(left, i, right)
 
-        if():
+
+        if(len(nums)%2 == 0 and right - left == 1):
+             flag = False
+        elif(len(nums)%2 == 1 and right - left == 2):
              flag = False
         left = left + 1
         right = right - 1
