@@ -547,14 +547,15 @@ def soham(nums):
     nums.sort()
     ans = []
     for i in range(0, len(nums)):
-        print(i)
         left = i + 1
         right = len(nums) - 1
         while(right > left):
             if(nums[left] + nums[right] + nums[i] == 0):
+                print([nums[left], nums[right], nums[i]])
                 if([nums[left], nums[right], nums[i]] not in ans):
                         ans.append([nums[left], nums[right], nums[i]])
-                break
+                left += 1
+                right -= 1
             elif(nums[left] + nums[right] + nums[i] < 0):
                 left += 1
             elif(nums[left] + nums[right] + nums[i] > 0):
