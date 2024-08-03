@@ -536,7 +536,15 @@ def soham(nums):
     left = 0
     right = len(nums) - 1
     print(left, right)
-    for i in range(1, len())
+    flag = True
+    while(flag):
+        for i in range(1, len(nums) - 1):
+                print(i)
+
+        if():
+             flag = False
+        left = left + 1
+        right = right - 1
     return ans
 
 print(soham(nums))
