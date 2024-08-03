@@ -530,8 +530,10 @@ def soham(target, arr):
     if(target == arr):
         return True
     else:
-        for i in target:
-            if(i in arr):
+        for i in range(0, len(target)):
+            if(arr[i] in arr):
+                arr[i] = "null"
+                print(target, arr, i, arr[i], target[i])
                 continue
             else:
                 return False
