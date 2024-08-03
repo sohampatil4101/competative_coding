@@ -1,3 +1,9 @@
+# container
+# 3sum
+
+
+
+
 # problem:2616
 
 # problem
@@ -523,3 +529,14 @@
 #     return ans
 
 # print(soham(data))
+
+nums = [-1,0,1,2,-1,-4]
+def soham(nums):
+    ans = []
+    left = 0
+    right = len(nums) - 1
+    print(left, right)
+    for i in range(1, len())
+    return ans
+
+print(soham(nums))
