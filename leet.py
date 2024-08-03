@@ -526,17 +526,46 @@
 
 target = [1,2,3,4]
 arr = [2,4,1,3]
+
+target = [3,7,9]
+arr = [3,7,11]
+
+target = [1,2,2,5]
+arr = [1,1,2,3]
 def soham(target, arr):
     if(target == arr):
         return True
     else:
-        for i in range(0, len(target)):
-            if(arr[i] in arr):
-                arr[i] = "null"
-                print(target, arr, i, arr[i], target[i])
-                continue
-            else:
+        if(len(target)%2 == 1):
+            if(target[len(target)// 2] not in arr):
                 return False
+            for i in range(0, len(target) // 2):
+                print(len(target), len(target)// 2, i, (len(target) - 1) - i, 4%2, 5%2)
+                if(target[i] in arr):
+                    arr.remove(target[i]) 
+                    print(target, arr, i, arr[i], target[i], arr[i] in arr, 9 in [11, 45])
+                    continue
+                if(target[(len(target) - 1) - i] in arr):
+                    arr.remove(target[i]) 
+                    print(target, arr, i, arr[i], target[i], arr[i] in arr, 9 in [11, 45])
+                    continue
+                else:
+                    return False
+
+        else:
+
+            for i in range(0, len(target) // 2):
+                print(len(target), len(target)// 2, i, (len(target) - 1) - i, 4%2, 5%2)
+                if(target[i] in arr):
+                    arr.remove(target[i]) 
+                    print(target, arr, i, arr[i], target[i], arr[i] in arr, 9 in [11, 45])
+                    continue
+                if(target[(len(target) - 1) - i] in arr):
+                    arr.remove(target[i]) 
+                    print(target, arr, i, arr[i], target[i], arr[i] in arr, 9 in [11, 45])
+                    continue
+                else:
+                    return False
     return True
 
 print(soham(target, arr))
