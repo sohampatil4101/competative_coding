@@ -581,17 +581,26 @@
 nums = [-1,2,1,-4]
 target = 1
 def soham(nums, target):
+    nums.sort()
     ans = float('inf')
     for i in range(0, len(nums)):
         if i > 0 and nums[i] == nums[i - 1]:
-            # Skip duplicate elements
             continue
         left = i + 1
-        right = len(nums) - 1
+        right = len(nums) - 1   
         while(right>left):
             so = nums[i] + nums[left] + nums[right]
             if(abs(so - target) < abs(ans - target)):
-                ans = abs(target - ans)
+                ans = so
+                print(ans, i, left, right)
+            if so < target:
+                left += 1
+            elif so > target:
+                right -= 1
+            else:
+                return so
+
+                
 
     return ans
 print(soham(nums, target))
