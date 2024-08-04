@@ -574,22 +574,4 @@
 
 # print(soham(nums))
 
-nums = [1,2,3,4]
-left = 1
-right = 5
-def soham(nums, left, right):
-    MOD = 10**9 + 7
-    ans = []
-    for i in range(0, len(nums)):
-        ans.append(nums[i])
-        for j in range(i + 1, len(nums)):
-            ans.append(ans[-1]  + nums[j])
-
-    ans.sort()
-    data = sum(ans[left - 1: right]) % MOD
-    return data 
-
-
-print(soham(nums, left, right))
-
 
