@@ -23,6 +23,19 @@
         # If the sum is less than zero, increment the left pointer.
         # If the sum is greater than zero, decrement the right pointer.
         # Skip duplicate elements to ensure unique triplets.
+# 3sum with closest target-
+        # Algorithm Steps
+        # Sort the array.
+        # Iterate through the array with a loop variable i.
+        #if i > 0 and nums[i] == nums[i - 1]:
+        #     # Skip duplicate elements
+        #     continue
+        # For each i, set two pointers: left (starting from i+1) and right (starting from the end of the array).
+        # Calculate the sum of the elements at i, left, and right.
+        # If the sum is zero, add the triplet to the result list, increment the left pointer and decrement the right pointer.
+        # If the sum is less than zero, increment the left pointer.
+        # If the sum is greater than zero, decrement the right pointer.
+        # Skip duplicate elements to ensure unique triplets.
 
 
 
