@@ -1,4 +1,14 @@
-# container-
+# Container With Most Water-
+        # left = 0
+        # right = len(arr) - 1
+        # max_area = 0
+        # width = right - left
+        # min_height = min(height[left], height[right])
+        # current_area = width * min_height
+        # if height[left] < height[right]:
+        #     left += 1
+        # else:
+        #     right -= 1
 
 # 3sum-
         # Algorithm Steps
