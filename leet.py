@@ -31,11 +31,15 @@
         #     # Skip duplicate elements
         #     continue
         # For each i, set two pointers: left (starting from i+1) and right (starting from the end of the array).
-        # Calculate the sum of the elements at i, left, and right.
-        # If the sum is zero, add the triplet to the result list, increment the left pointer and decrement the right pointer.
-        # If the sum is less than zero, increment the left pointer.
-        # If the sum is greater than zero, decrement the right pointer.
-        # Skip duplicate elements to ensure unique triplets.
+        # if abs(current_sum - target) < abs(closest_sum - target):
+        # closest_sum = current_sum
+        # if current_sum < target:
+        # left += 1
+        # elif current_sum > target:
+        # right -= 1
+        # else:
+        # # If the current_sum is exactly equal to target, return it
+        # return current_sum
 
 
 
