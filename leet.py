@@ -540,26 +540,33 @@
 
 # print(soham(data))
 
-nums = [-1,0,1,2,-1,-4]
-nums = [0,0,0,0]
-nums = [-2,0,1,1,2]
-def soham(nums):
-    nums.sort()
-    ans = []
-    for i in range(0, len(nums)):
-        left = i + 1
-        right = len(nums) - 1
-        while(right > left):
-            if(nums[left] + nums[right] + nums[i] == 0):
-                print([nums[left], nums[right], nums[i]])
-                if([nums[left], nums[right], nums[i]] not in ans):
-                        ans.append([nums[left], nums[right], nums[i]])
-                left += 1
-                right -= 1
-            elif(nums[left] + nums[right] + nums[i] < 0):
-                left += 1
-            elif(nums[left] + nums[right] + nums[i] > 0):
-                right -= 1
-    return ans
+# nums = [-1,0,1,2,-1,-4]
+# nums = [0,0,0,0]
+# nums = [-2,0,1,1,2]
+# def soham(nums):
+#     nums.sort()
+#     ans = []
+#     for i in range(0, len(nums)):
+#         left = i + 1
+#         right = len(nums) - 1
+#         while(right > left):
+#             if(nums[left] + nums[right] + nums[i] == 0):
+#                 print([nums[left], nums[right], nums[i]])
+#                 if([nums[left], nums[right], nums[i]] not in ans):
+#                         ans.append([nums[left], nums[right], nums[i]])
+#                 left += 1
+#                 right -= 1
+#             elif(nums[left] + nums[right] + nums[i] < 0):
+#                 left += 1
+#             elif(nums[left] + nums[right] + nums[i] > 0):
+#                 right -= 1
+#     return ans
 
-print(soham(nums))
+# print(soham(nums))
+
+
+
+
+
+
+
