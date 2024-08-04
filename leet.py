@@ -599,7 +599,11 @@ nums = [-1,2,1,-4]
 target = 1
 def soham(nums, target):
     nums.sort()
-    ans = float('inf')
-    return ans
+    quadruplets = []
+    for i in range(0, len(nums)):
+        for j in range(i+1, len(nums)):
+
+
+    return quadruplets
 print(soham(nums, target))
 
