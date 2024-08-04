@@ -593,3 +593,13 @@
 #     return ans
 
 # print(soham(nums))
+
+
+nums = [-1,2,1,-4]
+target = 1
+def soham(nums, target):
+    nums.sort()
+    ans = float('inf')
+    return ans
+print(soham(nums, target))
+
