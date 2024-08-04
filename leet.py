@@ -14,6 +14,9 @@
         # Algorithm Steps
         # Sort the array.
         # Iterate through the array with a loop variable i.
+        #if i > 0 and nums[i] == nums[i - 1]:
+        #     # Skip duplicate elements
+        #     continue
         # For each i, set two pointers: left (starting from i+1) and right (starting from the end of the array).
         # Calculate the sum of the elements at i, left, and right.
         # If the sum is zero, add the triplet to the result list, increment the left pointer and decrement the right pointer.
@@ -574,4 +577,22 @@
 
 # print(soham(nums))
 
+
+nums = [-1,2,1,-4]
+target = 1
+def soham(nums, target):
+    ans = float('inf')
+    for i in range(0, len(nums)):
+        if i > 0 and nums[i] == nums[i - 1]:
+            # Skip duplicate elements
+            continue
+        left = i + 1
+        right = len(nums) - 1
+        while(right>left):
+            so = nums[i] + nums[left] + nums[right]
+            if(abs(so - target) < abs(ans - target)):
+                ans = abs(target - ans)
+
+    return ans
+print(soham(nums, target))
 
