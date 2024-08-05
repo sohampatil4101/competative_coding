@@ -621,10 +621,17 @@
 # print(soham(nums, target))
 
 
-arr = [-1,2,1,-4]
-k = 1
+arr = ["d","b","c","b","c","a"]
+k = 2
 def soham(arr, k):
-    ans =""
-    return ans 
+    ans =[]
+    for i in range(0, len(arr)):
+        print(arr[(len(arr) - 1) - i])
+        arr[arr[(len(arr) - 1) - i]]
+        if(arr[(len(arr) - 1) - i] in arr):
+            continue
+        else:
+            ans.append(arr[(len(arr) - 1) - i])
+    return ans
 print(soham(arr, k))
 
