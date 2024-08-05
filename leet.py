@@ -595,30 +595,30 @@
 # print(soham(nums))
 
 
-nums = [-1,2,1,-4]
-target = 1
-def soham(nums, target):
-    nums.sort()
-    quadruplets = []
-    for i in range(0, len(nums) - 3):
-        if i > 0 and nums[i] == nums[i - 1]:
-            continue
-        for j in range(i + 1, len(nums) - 2):
-            if j > i + 1 and nums[j] == nums[j - 1]:
-                continue
-            left = j + 1
-            right = len(nums) - 1
+# nums = [-1,2,1,-4]
+# target = 1
+# def soham(nums, target):
+#     nums.sort()
+#     quadruplets = []
+#     for i in range(0, len(nums) - 3):
+#         if i > 0 and nums[i] == nums[i - 1]:
+#             continue
+#         for j in range(i + 1, len(nums) - 2):
+#             if j > i + 1 and nums[j] == nums[j - 1]:
+#                 continue
+#             left = j + 1
+#             right = len(nums) - 1
 
-            while(right > left):
-                total = nums[i] + nums[j] + nums[left] + nums[right]
-                if(total == target):
-                    quadruplets.append([total])
-                elif(total > target):
-                    right-= 1
-                else:
-                    left+= 1
-    return quadruplets
-print(soham(nums, target))
+#             while(right > left):
+#                 total = nums[i] + nums[j] + nums[left] + nums[right]
+#                 if(total == target):
+#                     quadruplets.append([total])
+#                 elif(total > target):
+#                     right-= 1
+#                 else:
+#                     left+= 1
+#     return quadruplets
+# print(soham(nums, target))
 
 
 arr = [-1,2,1,-4]
