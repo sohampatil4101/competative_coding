@@ -639,7 +639,6 @@ def numberToWords(num: int) -> str:
     if num == 0:
         return "Zero"
     
-    # Define the words for single digits, tens, and teens
     below_20 = ["", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten", 
                 "Eleven", "Twelve", "Thirteen", "Fourteen", "Fifteen", "Sixteen", "Seventeen", 
                 "Eighteen", "Nineteen"]
@@ -663,8 +662,3 @@ def numberToWords(num: int) -> str:
         num //= 1000
     
     return result.strip()
-
-# Examples
-print(numberToWords(123))        
-print(numberToWords(12345))       
-print(numberToWords(1234567))    
