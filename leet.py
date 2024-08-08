@@ -634,3 +634,24 @@
 #             ans.append(arr[(len(arr) - 1) - i])
 #     return ans
 # print(soham(arr, k))
+
+def soham():
+        directions = [(0, 1), (1, 0), (0, -1), (-1, 0)]  # right, down, left, up
+        result = []
+        steps = 1
+        direction_index = 0
+        r, c = rStart, cStart
+        result.append([r, c])
+
+        while len(result) < rows * cols:
+            for _ in range(2):
+                dr, dc = directions[direction_index]
+                for _ in range(steps):
+                    r += dr
+                    c += dc
+                    if 0 <= r < rows and 0 <= c < cols:
+                        result.append([r, c])
+                direction_index = (direction_index + 1) % 4
+            steps += 1
+
+        return result
