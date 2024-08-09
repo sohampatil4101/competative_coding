@@ -639,3 +639,17 @@
 #     return ans
 
 # print(soham(data))
+
+grid = [[4,3,8,4],[9,5,1,9],[2,7,6,2]]
+def soham(grid):
+    ans = 0
+    print(len(grid) - 2)
+    for i in range(0, len(grid)):
+        start = 0
+        end = 0
+        for j in range(0, len(grid[i])):
+            pass
+    return ans
+
+
+print(soham(grid))
