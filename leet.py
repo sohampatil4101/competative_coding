@@ -644,11 +644,16 @@ grid = [[4,3,8,4],[9,5,1,9],[2,7,6,2]]
 def soham(grid):
     ans = 0
     print(len(grid) - 2)
-    for i in range(0, len(grid)):
-        start = 0
-        end = 0
-        for j in range(0, len(grid[i])):
-            pass
+    start = 0
+    end = 3
+    while(start <= (len(grid) - 2)):
+        for i in range(0, len(grid)):
+            for j in range(start, end):
+                print(grid[i][j], end="")
+            print("")
+        start = start + 1
+        end = end + 1
+        print("\n")
     return ans
 
 
